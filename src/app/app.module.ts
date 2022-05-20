@@ -5,18 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NavBarHorizontalComponent } from './nav-bar-horizontal/nav-bar-horizontal.component';
-import { ContentComponent } from './content/content.component';
+import { FooterComponent } from './footer/footer.component';
+import { BodyContentComponent } from './body-content/body-content.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     NavBarHorizontalComponent,
-    ContentComponent
+    FooterComponent,
+    BodyContentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
