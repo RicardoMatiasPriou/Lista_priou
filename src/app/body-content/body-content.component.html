@@ -22,6 +22,8 @@
                     class="form-control"
                     formControlName="nombre"
                   />
+                  <span *ngIf="this.alumnosForm.get('nombre')?.errors?.['required']"class="form-text m-b-none text-danger">El nombre no puede estar vacio</span>
+
                 </div>
                 <div class="form-group">
                   <label>Email</label>
@@ -31,6 +33,8 @@
                     class="form-control"
                     formControlName="correo"
                   />
+                  <span *ngIf="this.alumnosForm.get('correo')?.errors?.['required']"class="form-text m-b-none text-danger">El correo no puede estar vacio</span>
+                  <span *ngIf="this.alumnosForm.get('correo')?.errors?.['email']"class="form-text m-b-none text-danger">El correo no es valido</span>
                 </div>
                 <div class="form-group">
                   <label>Mensaje</label>
@@ -40,6 +44,8 @@
                     class="form-control"
                     formControlName="mensaje"
                   />
+                  <span *ngIf="this.alumnosForm.get('mensaje')?.errors?.['required']"class="form-text m-b-none text-danger">El mensaje no puede estar vacio</span>
+
                 </div>
                 <div class="arreglo2">
                   <button

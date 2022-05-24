@@ -18,17 +18,16 @@ export class BodyContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.alumnosForm=this.fb.group({
-      nombre:[""],
-      correo:[""],
-      mensaje:[""]
+      nombre:["", Validators.required],
+      correo:["", [Validators.required , Validators.email]],
+      mensaje:["", Validators.required]
     })
   }
 
 
   onSubmit(){
 
-    console.log();
-
+alert(this.alumnosForm.value.nombre)
   }
 
 }
